@@ -170,3 +170,47 @@
 .addInput:focus {
   background: rgba(201, 146, 42, 0.03);
 }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .panel {
+    overflow: visible;
+  }
+
+  .taskList {
+    overflow: visible;
+  }
+
+  .quadrantSub { display: none; }
+
+  .task {
+    min-height: 44px;
+    padding: 8px 14px;
+  }
+
+  /* Always show delete on touch; hide move buttons (hover doesn't exist) */
+  .actions { opacity: 1; }
+  .moveBtn  { display: none; }
+
+  .checkbox {
+    padding: 10px;
+    margin: -10px;
+  }
+
+  .deleteBtn {
+    font-size: 18px;
+    padding: 6px 8px;
+  }
+
+  /* Prevents iOS from zooming on input focus */
+  .addInput {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+}

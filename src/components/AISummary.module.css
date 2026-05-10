@@ -69,3 +69,18 @@
   background: rgba(201, 146, 42, 0.16);
   border-color: var(--gold);
 }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .panel {
+    flex: none;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .exportBtn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 14px;
+  }
+}

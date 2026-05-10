@@ -125,3 +125,31 @@
 
 .addInput::placeholder { color: rgba(232, 228, 217, 0.18); }
 .addInput:focus { background: rgba(201, 146, 42, 0.03); }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .panel {
+    overflow: visible;
+  }
+
+  .list {
+    overflow: visible;
+  }
+
+  .item {
+    min-height: 44px;
+    padding: 8px 16px;
+  }
+
+  .checkbox {
+    width: 22px;
+    height: 22px;
+  }
+
+  .habitName { font-size: 13px; }
+
+  .addInput {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+}

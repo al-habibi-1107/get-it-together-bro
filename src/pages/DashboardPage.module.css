@@ -84,3 +84,43 @@
   flex: 1;
   min-height: 0;
 }
+
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .root {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--bg);
+    height: 48px;
+    padding: 0 16px;
+  }
+
+  .date { display: none; }
+
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1px;
+  }
+
+  .matrixWrap {
+    height: auto;
+    overflow: visible;
+  }
+
+  .sidebar {
+    height: auto;
+    overflow: visible;
+  }
+
+  .sidebar > :first-child {
+    flex: none;
+  }
+}
