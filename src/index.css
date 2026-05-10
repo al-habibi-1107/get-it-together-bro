@@ -1,3 +1,20 @@
+:root {
+  --gold: #c9922a;
+  --gold-dim: rgba(201, 146, 42, 0.13);
+  --gold-mid: rgba(201, 146, 42, 0.45);
+  --gold-glow: rgba(201, 146, 42, 0.10);
+  --text: #e8e4d9;
+  --text-muted: rgba(232, 228, 217, 0.38);
+  --bg: #060810;
+  --surface: #0a0e16;
+  --border: rgba(201, 146, 42, 0.12);
+  --error: #d95c5c;
+  --q1: #c9922a;
+  --q2: #5b8dd9;
+  --q3: #b07840;
+  --q4: #55606e;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +22,11 @@
 }
 
 body {
+  background: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
-  font: inherit;
-}
+button { font: inherit; cursor: pointer; }
+input  { font: inherit; }

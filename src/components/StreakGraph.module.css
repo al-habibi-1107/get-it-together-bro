@@ -1,0 +1,85 @@
+.panel {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px 9px;
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+
+.title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.graphWrap {
+  display: flex;
+  gap: 4px;
+  padding: 10px 16px 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.graphWrap::-webkit-scrollbar { display: none; }
+
+.dayLabels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 0;
+  flex-shrink: 0;
+}
+
+.dayLabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  color: var(--text-muted);
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+  width: 10px;
+}
+
+.weeks {
+  display: flex;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  transition: opacity 0.15s;
+  cursor: default;
+}
+
+.cell:hover { opacity: 0.8; }
+
+.future { opacity: 0; pointer-events: none; }
+
+.today {
+  outline: 1px solid rgba(201, 146, 42, 0.5);
+  outline-offset: 1px;
+}

@@ -7,7 +7,8 @@ import {
   signOut as firebaseSignOut,
   onAuthStateChanged,
 } from 'firebase/auth'
-import { auth } from '../firebase/config'
+import { auth, db } from '../firebase/config'
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore'
 
 interface AuthContextValue {
   user: User | null
@@ -27,6 +28,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      if (firebaseUser) {
+        setDoc(
+          doc(db, 'users', firebaseUser.uid, 'profile', 'data'),
+          {
+            displayName: firebaseUser.displayName ?? '',
+            email: firebaseUser.email ?? '',
+            lastSignIn: serverTimestamp(),
+          },
+          { merge: true },
+        ).catch(console.error)
+      }
       setUser(firebaseUser)
       setLoading(false)
     })
