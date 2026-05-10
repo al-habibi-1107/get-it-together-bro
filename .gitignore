@@ -1,0 +1,22 @@
+# SRS doc and local config
+/Meridian_SRS.docx
+/CLAUDE.md
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode
+.idea
+*.sw?
+
+# OS
+.DS_Store
